@@ -78,7 +78,7 @@ module XIdler()
                         cylinder(h = 4, r = 11.5, $fn = 90, center = true);
                 translate([31, 37.5, 15])
                     rotate([0, 90, 0])
-                        cylinder(h = 4, r = 8.5, $fn = 90, center = true);
+                        cylinder(h = 4, r = 9, $fn = 90, center = true);
             }
             translate([31, 29.75, 19])
                 cube([4, 3.5, 20], center = true);
@@ -89,7 +89,7 @@ module XIdler()
                         cylinder(h = 4, r = 11.5, $fn = 90, center = true);
                 translate([-31, 37.5, 15])
                     rotate([0, 90, 0])
-                        cylinder(h = 4, r = 8.5, $fn = 90, center = true);
+                        cylinder(h = 4, r = 9, $fn = 90, center = true);
             }
             translate([-31, 29.75, 19])
                 cube([4, 3.5, 20], center = true);
