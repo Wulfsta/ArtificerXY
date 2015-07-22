@@ -80,8 +80,8 @@ module XIdler()
                     rotate([0, 90, 0])
                         cylinder(h = 4, r = 9, $fn = 90, center = true);
             }
-            translate([31, 29.75, 19])
-                cube([4, 3.5, 20], center = true);
+            translate([31, 30, 18])
+                cube([4, 3, 20], center = true);
             difference()
             {
                 translate([-31, 37.5, 15])
@@ -91,8 +91,8 @@ module XIdler()
                     rotate([0, 90, 0])
                         cylinder(h = 4, r = 9, $fn = 90, center = true);
             }
-            translate([-31, 29.75, 19])
-                cube([4, 3.5, 20], center = true);
+            translate([-31, 30, 18])
+                cube([4, 3, 20], center = true);
             translate([0, 0, 35])
                 rotate([-90, 0, 0])
                     polyhole(28, 1.5);
