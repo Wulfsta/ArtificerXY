@@ -227,10 +227,10 @@ module Carriage()
                 cylinder(h = 20, r = 4, $fn = 90);
             translate([-40, 55, 20.75])
                 cube([15, 2.13, 20], center = true);
-            translate([-47.5, 37, 16.5])
-                cube([15, 2, 11.5], center = true);
-            translate([-47.5, 49, 6.875])
-                cube([15, 2, 7.75], center = true);
+            translate([-47.5, 37, 14.25])
+                cube([15, 2, 7], center = true);
+            translate([-47.5, 49, 7.25])
+                cube([15, 2, 7], center = true);
             translate([-55, 46, 14.625])
                 rotate([90, 0, 90])
                     polyhole(15, 1.5);
