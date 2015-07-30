@@ -73,18 +73,18 @@ module CoreMotorMount();
         translate([36.65, 36.65, 0])
             polyhole(8, 1.5);
         translate([10, -10, 0])
-            polyhole(6, 2.25);
+            polyhole(6, 2);
         translate([50, -10, 0])
-            polyhole(6, 2.25);
+            polyhole(6, 2);
         translate([-10, 10, 0])
-            polyhole(6, 2.25);
+            polyhole(6, 2);
         translate([-10, 50, 0])
-            polyhole(6, 2.25);
+            polyhole(6, 2);
         translate([50, 0, 16])
-            rotate([0, 90, 90])
-                polyhole(7, 2.25);
+            rotate([-90, 22.5, 0])
+                polyhole(7, 2);
         translate([0, 50, 16])
-            rotate([0, 90, 0])
-                polyhole(7, 2.25);
+            rotate([90, 22.5, 90])
+                polyhole(7, 2);
     }
 }
