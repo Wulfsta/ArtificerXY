@@ -37,9 +37,14 @@ module YMount()
             translate([51.25, -10, 19])
                 cube([14, 20, 38], center = true);
         }
-        translate([51.25, 0, 13.5])
-            rotate([90, 0, 0])
-                polyhole(20, 4);
+        hull()
+        {
+            translate([51.25, 0, 13.5])
+                rotate([90, 0, 0])
+                    polyhole(20, 4);
+            translate([51.25, -10, 18.5])
+                cube([1.5, 20, 2], center = true);
+        }
         difference()
         {
             translate([58.25, -10, 26.5])
