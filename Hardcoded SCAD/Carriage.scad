@@ -205,28 +205,28 @@ module Carriage()
             {
                 translate([47, 32, 3])
                     cylinder(h = 11.5, r = 5, $fn = 90);
-                translate([52.5, 36.935, 8.75])
-                    cube([1, 2.13, 11.5], center = true);
+                translate([52.5, 37, 8.75])
+                    cube([1, 2, 11.5], center = true);
             }
-            translate([57.5, 36.935, 8.75])
-                cube([10, 2.13, 11.5], center = true);
+            translate([57.5, 37, 8.75])
+                cube([10, 2, 11.5], center = true);
             hull()
             {
                 translate([47, 54, 10.75])
                     cylinder(h = 11.5, r = 5, $fn = 90);
-                translate([52.5, 49.065, 16.5])
-                    cube([1, 2.13, 11.5], center = true);
+                translate([52.5, 49, 16.5])
+                    cube([1, 2, 11.5], center = true);
             }
-            translate([57.5, 49.065, 16.5])
-                cube([10, 2.13, 11.5], center = true);
+            translate([57.5, 49, 16.5])
+                cube([10, 2, 11.5], center = true);
             translate([-49, 31, 3])
                 cylinder(h = 20, r = 4, $fn = 90);
             translate([-40, 31, 13])
-                cube([15, 2.13, 20], center = true);
+                cube([15, 2, 20], center = true);
             translate([-49, 55, 10.75])
                 cylinder(h = 20, r = 4, $fn = 90);
             translate([-40, 55, 20.75])
-                cube([15, 2.13, 20], center = true);
+                cube([15, 2, 20], center = true);
             translate([-47.5, 37, 14.25])
                 cube([15, 2, 7], center = true);
             translate([-47.5, 49, 7.25])
@@ -264,12 +264,12 @@ module Carriage()
         translate([-13, 73, 4])
             cube([2, 26, 3], center = true);
         translate([47, 32, 0])
-            cylinder(h = 11.5, r = 3.17, $fn = 90);
+            cylinder(h = 11.5, r = 3.62, $fn = 90);
         translate([47, 54, 0])
-            cylinder(h = 18.75, r = 3.17, $fn = 90);
+            cylinder(h = 18.75, r = 3.62, $fn = 90);
         translate([-49, 31, 0])
-                cylinder(h = 11.5, r = 2.17, $fn = 90);
+                cylinder(h = 11.5, r = 2.62, $fn = 90);
         translate([-49, 55, 0])
-                cylinder(h = 18.75, r = 2.17, $fn = 90);
+                cylinder(h = 18.75, r = 2.62, $fn = 90);
     }
 }
