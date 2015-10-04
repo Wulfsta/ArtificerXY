@@ -71,9 +71,9 @@ module BedNoLead()
             translate([10, -14, 14])
                 rotate([0, 0, 45])
                     cube([23, 23, 28], center = true);
-            translate([0, 25, 0])
+            translate([-0.25, 17, 0])
                 polyhole(6, 1.5);
-            translate([20, 25, 0])
+            translate([20.25, 17, 0])
                 polyhole(6, 1.5);
             translate([2, 71, 0])
                 polyhole(6, 1.5);

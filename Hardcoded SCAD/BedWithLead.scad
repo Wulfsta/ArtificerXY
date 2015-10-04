@@ -1,4 +1,5 @@
 use<polyhole.scad>
+use<nutShape.scad>
 
 BedNoLead();
 
@@ -118,7 +119,7 @@ module BedNoLead()
             translate([10, -14, 14])
                 rotate([0, 0, 45])
                     cube([23, 23, 28], center = true);
-            translate([0, 25, 0])
+            translate([-0.25, 17, 0])
                 polyhole(6, 1.5);
             translate([20, 25, 0])
                 polyhole(6, 1.5);
@@ -139,7 +140,7 @@ module BedNoLead()
             translate([29, -20, 0])
                 cube([26, 11.5, 6]);
             translate([42, 15, 6])
-                cylinder(h = 28, r = 3.25, $fn = 90);
+                nutShape(5.55, 28);
             translate([42, 15, 0])
                 polyhole(6, 1.5);
         }
