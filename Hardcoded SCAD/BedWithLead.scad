@@ -1,11 +1,8 @@
-// A printed part that attaches to a side of the bed and has a lead screw
-// attachment.
-
 use<polyhole.scad>
 
-BedWithLead();
+BedNoLead();
 
-module BedWithLead()
+module BedNoLead()
 {
     union()
     {
@@ -13,45 +10,20 @@ module BedWithLead()
         {
             union()
             {
-                translate([10, 0, 0])
-                    difference()
-                    {
-                        cylinder(h = 26, r = 10, $fn = 90);
-                        translate([-8.75, 0, 13])
-                            cube([3, 1.5, 26], center = true);
-                    }
                 hull()
                 {
-                    linear_extrude(height = 6)
-                        polygon([[-5, 0.75], [0, 0.75], [0, 0.76]]);
+                    translate([5, 6.5, 3])
+                        cube([2, 2, 6], center = true);
+                    translate([-2, 8.5, 0])
+                        cylinder(h = 6, r = 3, $fn = 90);
                     translate([1, 73, 0])
                         cylinder(h = 6, r = 3, $fn = 90);
                     translate([19, 73, 0])
                         cylinder(h = 6, r = 3, $fn = 90);
-                    linear_extrude(height = 6)
-                        polygon([[25, 0.75], [20, 0.75], [25, 0.76]]);
-                }
-                difference()
-                {
-                    difference()
-                    {
-                        translate([10, 0, 13])
-                            rotate_extrude($fn = 90)
-                                translate([-10, 0, 0])
-                                        scale([10, 26])
-                                            circle(0.5, $fn = 90);
-                        translate([10, 0, 0])
-                            cylinder(h = 26, r = 10, $n = 90);
-                    }
-                    translate([10, -7.25, 13])
-                        cube([30, 16, 26], center = true);
-                }
-                difference()
-                {
-                    translate([10, 0, 0])
-                        cylinder(h = 13, r = 15, $fn = 90);
-                    translate([10, -7.25, 6.5])
-                        cube([30, 16, 13], center = true);
+                    translate([22, 8.5, 0])
+                        cylinder(h = 6, r = 3, $fn = 90);
+                    translate([15, 6.5, 3])
+                        cube([2, 2, 6], center = true);
                 }
                 difference()
                 {
@@ -65,13 +37,13 @@ module BedWithLead()
                             translate([10, 67, -10])
                                 cube([20, 20, 20], center = true);
                         }
-                        translate([10, 20, 24])
+                        translate([10, 20, 26])
                             rotate([0, 90, 0])
                                 cylinder(h = 12, r = 2, $fn = 90, center = true);
-                        translate([10, 2.75, 24])
+                        translate([10, 2, 26])
                             rotate([0, 90, 0])
                                 cylinder(h = 12, r = 2, $fn = 90, center = true);
-                        translate([10, 2.75, 6])
+                        translate([10, 2, 6])
                             rotate([0, 90, 0])
                                 cylinder(h = 12, r = 2, $fn = 90, center = true);
                     }
@@ -82,6 +54,17 @@ module BedWithLead()
                         rotate([0, 4, -2])
                             cube([10, 90, 30], center = true);
                 }
+                hull()
+                {
+                    translate([10, 0, 0])
+                        cylinder(h = 28, r = 10, $fn = 90);
+                    translate([1, 10, 0])
+                        cylinder(h = 28, r = 1, $fn = 90);
+                    translate([19, 10, 0])
+                        cylinder(h = 28, r = 1, $fn = 90);
+                    translate([10, 19, 14])
+                        cube([8.5, 2, 28], center = true);
+                }
                 translate([42, 0, 0])
                     scale([26, 40, 6])
                         cylinder(h = 1, r = 0.5, $fn = 90);
@@ -89,44 +72,60 @@ module BedWithLead()
                 {
                     hull()
                     {
-                        translate([47.75, 10.375, 6])
+                        translate([47.75, 10, 6])
                             rotate([90, 0, 0])
-                                cylinder(h = 19.25, r = 6, $fn = 90, center = true);
-                        translate([10, 10.375, 1])
+                                cylinder(h = 20, r = 6, $fn = 90, center = true);
+                        translate([10, 10, 1])
                             rotate([90, 0, 0])
-                                cylinder(h = 19.25, r = 1, $fn = 90, center = true);
-                        translate([10, 10.375, 25])
+                                cylinder(h = 20, r = 1, $fn = 90, center = true);
+                        translate([10, 10, 27])
                             rotate([90, 0, ])
-                                cylinder(h = 19.25, r = 1, $fn = 90, center = true);
-                        translate([25, 10.375, 25])
+                                cylinder(h = 20, r = 1, $fn = 90, center = true);
+                        translate([20, 10, 27])
                             rotate([90, 0, 2])
-                                cylinder(h = 19.25, r = 1, $fn = 90, center = true);
+                                cylinder(h = 20, r = 1, $fn = 90, center = true);
                     }
                     difference()
                     {
                         translate([42, 0, 6])
-                            cylinder(h = 18, r = 13, $fn = 90);
+                            cylinder(h = 22, r = 13, $fn = 90);
                         translate([29, 8.5, 6])
-                            cube([26, 6.5, 18]);
+                            cube([28, 6.5, 22]);
                     }
                     difference()
                     {
                         translate([42, 0, 0])
-                            cylinder(h = 26, r = 30, $fn = 90);
+                            cylinder(h = 28, r = 30, $fn = 90);
                         translate([42, 0, 0])
-                            scale([26, 40, 26])
+                            scale([26, 40, 28])
                                 cylinder(h = 1, r = 0.5, $fn = 90);
                         translate([0, -30, 0])
-                            cube([42, 60, 26]);
+                            cube([42, 60, 28]);
                     }
                     translate([42, 0, 6])
-                        cube([20, 8.5, 18]);
+                        cube([20, 8.5, 22]);
+                    hull()
+                    {
+                        translate([19, -4.5, 20])
+                            cube([2, 20, 40], center = true);
+                        translate([26, -1, 20])
+                            cube([2, 2, 40], center = true);
+                    }
                 }
             }
             translate([10, 0, 0])
-                polyhole(26, 7.5);
-            translate([29, -20, 0])
-                cube([26, 11.5, 6]);
+                polyhole(28, 7.5);
+            translate([10, -14, 14])
+                rotate([0, 0, 45])
+                    cube([23, 23, 28], center = true);
+            translate([0, 25, 0])
+                polyhole(6, 1.5);
+            translate([20, 25, 0])
+                polyhole(6, 1.5);
+            translate([2, 71, 0])
+                polyhole(6, 1.5);
+            translate([18, 71, 0])
+                polyhole(6, 1.5);
             translate([42, 0, 0])
                 polyhole(6, 4);
             translate([42 - 9 * sin(60), 9 * cos(60), 0])
@@ -137,41 +136,16 @@ module BedWithLead()
                 polyhole(6, 2);
             translate([42 + 9 * sin(60), - 9 * cos(60), 0])
                 polyhole(6, 2);
-            difference()
-            {
-                translate([-5, 0.75, 0])
-                    cube([1, 1, 26]);
-                translate([-4, 1.75, 0])
-                    cylinder(h = 26, r = 1, $fn = 90);
-            }
-            translate([10, 0, 5.5])
-                difference()
-                {
-                    cylinder(h = 4, r = 12, $fn = 90);
-                    cylinder(h = 4, r = 10, $fn = 90);
-                }
-            translate([10, 0, 16.5])
-                difference()
-                {
-                    cylinder(h = 4, r = 12, $fn = 90);
-                    cylinder(h = 4, r = 10, $fn = 90);
-                }
-            translate([0.5, 25, 0])
-                polyhole(6, 1.5);
-            translate([19.5, 25, 0])
-                polyhole(6, 1.5);
-            translate([2, 71, 0])
-                polyhole(6, 1.5);
-            translate([18, 71, 0])
+            translate([29, -20, 0])
+                cube([26, 11.5, 6]);
+            translate([42, 15, 6])
+                cylinder(h = 28, r = 3.25, $fn = 90);
+            translate([42, 15, 0])
                 polyhole(6, 1.5);
         }
-        difference()
-        {
-            translate([10, 5.75, 1])
-                cube([15, 10, 2], center = true);
-            translate([10, 0.75, 0])
-                scale([15, 8, 2])
-                    cylinder(h = 1, r = .5, $fn = 90);
-        }
+        translate([10, 9.5, 1])
+            cube([15, 8, 2], center = true);
+        translate([10, 9.5, 27])
+            cube([15, 8, 2], center = true);
     }
 }
