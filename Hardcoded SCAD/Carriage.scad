@@ -147,10 +147,10 @@ module Carriage()
                     polyhole(110, 6);
             hull()
             {
-                translate([-14, 72.5, 10.75])
+                translate([-14, 72.25, 10.75])
                     rotate([0, 90, 0])
                         polyhole(28, 7.5);
-                translate([-14, 73.5, 10.75])
+                translate([-14, 73.75, 10.75])
                     rotate([0, 90, 0])
                         polyhole(28, 7.5);
             }
