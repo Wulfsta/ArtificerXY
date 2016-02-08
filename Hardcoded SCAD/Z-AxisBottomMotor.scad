@@ -52,11 +52,10 @@ module ZBottomMotor()
                 cube([6, 78, 20], center = true);
             hull()
             {
-                translate([-32, 68, 24.15])
+                translate([-32, 68, 26])
                     cube([14, 20, 46], center = true);
-                translate([-32, 58, 47.15])
-                    rotate([-90, 0, 0])
-                        cylinder(h = 20, r = 7, $fn = 90);
+                translate([-32, 68, 31])
+                    cube([8, 20, 46], center = true);
             }
             hull()
             {
