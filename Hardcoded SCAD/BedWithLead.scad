@@ -130,13 +130,13 @@ module BedNoLead()
             translate([42, 0, 0])
                 polyhole(6, 4);
             translate([42 - 9 * sin(60), 9 * cos(60), 0])
-                polyhole(6, 2);
+                polyhole(6, 1.7);
             translate([42 - 9 * sin(60), - 9 * cos(60), 0])
-                polyhole(6, 2);
+                polyhole(6, 1.7);
             translate([42 + 9 * sin(60), 9 * cos(60), 0])
-                polyhole(6, 2);
+                polyhole(6, 1.7);
             translate([42 + 9 * sin(60), - 9 * cos(60), 0])
-                polyhole(6, 2);
+                polyhole(6, 1.7);
             translate([29, -20, 0])
                 cube([26, 11.5, 6]);
             translate([42, 15, 6])
