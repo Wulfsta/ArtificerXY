@@ -125,37 +125,37 @@ module XIdler()
             {
                 translate([39.5, 20.5, 5.5])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
                 translate([45, 20.5, 5.5])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
             }
             hull()
             {
                 translate([39.5, 20.5, 23])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
                 translate([45, 20.5, 23])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
             }
             hull()
             {
                 translate([-39.5, 20.5, 5.5])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
                 translate([-45, 20.5, 5.5])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
             }
             hull()
             {
                 translate([-39.5, 20.5, 23])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
                 translate([-45, 20.5, 23])
                     rotate([-90, 0, 0])
-                        nutShape(5.5, 2.5);
+                        nutShape(5.6, 2.5);
             }
         }
         translate([44, 45, 11])
