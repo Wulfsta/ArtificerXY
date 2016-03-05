@@ -137,21 +137,21 @@ module Carriage()
                 }
             }
             translate([-55, 13, 10.75])
-                rotate([0, 90, 0])
+                rotate([90, 0, 90])
                     polyhole(28, 7.5);
             translate([27, 13, 10.75])
-                rotate([0, 90, 0])
+                rotate([90, 0, 90])
                     polyhole(28, 7.5);
             translate([-55, 73, 10.75])
-                rotate([0, 90, 0])
+                rotate([90, 0, 90])
                     polyhole(110, 6);
             hull()
             {
                 translate([-14, 72.25, 10.75])
-                    rotate([0, 90, 0])
+                    rotate([90, 0, 90])
                         polyhole(28, 7.5);
                 translate([-14, 73.75, 10.75])
-                    rotate([0, 90, 0])
+                    rotate([90, 0, 90])
                         polyhole(28, 7.5);
             }
             translate([41, 13, 10.75])
