@@ -1,6 +1,7 @@
 // A mount for the motors of the x and y axis.
 
 use<polyhole.scad>
+use<trunctear.scad>
 
 CoreMotorMount();
 
@@ -81,10 +82,10 @@ module CoreMotorMount()
         translate([-10, 50, 0])
             polyhole(6, 2);
         translate([50, 0, 16])
-            rotate([-90, 22.5, 0])
-                polyhole(7, 2);
+            rotate([90, 0, 180])
+                trunctear(7, 2, 90);
         translate([0, 50, 16])
-            rotate([90, 22.5, 90])
-                polyhole(7, 2);
+            rotate([90, 0, 90])
+                trunctear(7, 2, 90);
     }
 }

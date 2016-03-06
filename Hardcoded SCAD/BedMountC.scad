@@ -1,6 +1,7 @@
 // A corner mount for the bed, which uses two V wheels. Uses 40mm m5 bolts to mount the wheels
 
 use<polyhole.scad>
+use<trunctear.scad>
 
 BedMountC();
 
@@ -61,10 +62,10 @@ module BedMountC()
         }
         translate([20, -6, 4])
             rotate([90, 0, -90])
-                polyhole(30, 2.5);
+                trunctear(30, 2.5, 90);
         translate([20, -6, 64])
             rotate([90, 0, -90])
-                polyhole(30, 2.5);
+                trunctear(30, 2.5, 90);
         translate([0, 0, 6])
             linear_extrude(height = 30, scale = 0)
                 polygon([[0, 0], [15, 0], [0, 20]]);

@@ -1,6 +1,7 @@
 // A mount for the y-axis bar.
 
 use<polyhole.scad>
+use<trunctear.scad>
 
 YMount();
 
@@ -89,6 +90,6 @@ module YMount()
             polyhole(6, 2);
         translate([46, -10, 29])
             rotate([90, 0, 90])
-                polyhole(14, 1.5);
+                trunctear(14, 1.5, 90);
     }
 }

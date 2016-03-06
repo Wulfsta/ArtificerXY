@@ -1,6 +1,7 @@
 // A generic bearing mount
 
 use<polyhole.scad>
+use<trunctear.scad>
 
 BearingMount();
 
@@ -61,10 +62,10 @@ module BearingMount()
         translate([31.25, 15, 0])
             polyhole(6, 1.5);
         translate([0, 25, 16])
-            rotate([90, 22.5, 90])
-                polyhole(7, 2);
+            rotate([90, 0, 90])
+                trunctear(7, 2, 90);
         translate([40, 0, 16])
-            rotate([-90, 22.5, 0])
-                polyhole(7, 2);
+            rotate([-90, 180, 0])
+                trunctear(7, 2, 90);
     }
 }
