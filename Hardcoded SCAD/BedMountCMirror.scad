@@ -2,6 +2,8 @@
 
 use<BedMountC.scad>
 
+BedMountCMirror();
+
 module BedMountCMirror()
 {
     scale([1, -1, 1])
