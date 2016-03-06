@@ -4,7 +4,7 @@ use<polyhole.scad>
 
 CoreMotorMount();
 
-module CoreMotorMount();
+module CoreMotorMount()
 {
     difference()
     {

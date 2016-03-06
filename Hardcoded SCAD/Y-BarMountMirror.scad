@@ -2,5 +2,10 @@
 
 use<Y-BarMount.scad>
 
-scale([-1, 1, 1])
-    YMount();
+YMountMirror();
+
+module YMountMirror()
+{
+    scale([-1, 1, 1])
+        YMount();
+}

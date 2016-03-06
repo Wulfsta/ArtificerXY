@@ -2,6 +2,10 @@
 
 use<Y-BarMountBearings.scad>
 
-scale([-1, 1, 1])
-    YMountBearing();
-    
+YMountBearingMirror();
+
+module YMountBearingMirror()
+{
+    scale([-1, 1, 1])
+        YMountBearing();
+}

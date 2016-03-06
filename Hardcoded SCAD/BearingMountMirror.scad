@@ -2,5 +2,10 @@
 
 use<BearingMount.scad>
 
-scale([-1, 1, 1])
-    BearingMount();
+BearingMountMirror();
+
+module BearingMountMirror()
+{
+    scale([-1, 1, 1])
+        BearingMount();
+}
