@@ -63,9 +63,9 @@ module BearingMount()
             polyhole(6, 1.5);
         translate([0, 25, 16])
             rotate([90, 0, 90])
-                trunctear(7, 2, 90);
+                trunctear(7, 2, $fn = 90);
         translate([40, 0, 16])
             rotate([-90, 180, 0])
-                trunctear(7, 2, 90);
+                trunctear(7, 2, $fn = 90);
     }
 }

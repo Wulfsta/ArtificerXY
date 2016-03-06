@@ -50,7 +50,7 @@ module BedMount()
         }
         translate([20, -6, 4])
             rotate([90, 0, -90])
-                trunctear(30, 2.5, 90);
+                trunctear(30, 2.5, $fn = 90);
         translate([60, 10, 0])
             polyhole(6, 2);
         translate([10, 60, 0])

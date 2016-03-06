@@ -1,6 +1,7 @@
 //X-axis endstop mount.
 
 use<polyhole.scad>
+use<trunctear.scad>
 
 EndstopXZ();
 
@@ -38,6 +39,6 @@ module EndstopXZ()
             cylinder(h = 8, r = 1.75, $fn = 90);
         translate([-10, -15, 3])
             rotate([90, 0, 90])
-                polyhole(20, 1.5);
+                trunctear(20, 1.5, $fn = 90);
     }
 }

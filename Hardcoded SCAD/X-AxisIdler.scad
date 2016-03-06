@@ -96,7 +96,7 @@ module XIdler()
                 cube([4, 3, 20], center = true);
             translate([0, 0, 38])
                 rotate([90, 0, 180])
-                    trunctear(28, 1.5, 90);
+                    trunctear(28, 1.5, $fn = 90);
             translate([37.5, 14, 22])
                 cube([15, 1.25, 44], center = true);
             translate([-37.5, 14, 22])
@@ -111,16 +111,16 @@ module XIdler()
                 cube([30, 7, 44], center = true);
             translate([39.5, 7, 5.5])
                 rotate([90, 0, 180])
-                    trunctear(18, 1.5, 90);
+                    trunctear(18, 1.5, $fn = 90);
             translate([39.5, 7, 23])
                 rotate([90, 0, 180])
-                    trunctear(18, 1.5, 90);
+                    trunctear(18, 1.5, $fn = 90);
             translate([-39.5, 7, 5.5])
                 rotate([90, 0, 180])
-                    trunctear(18, 1.5, 90);
+                    trunctear(18, 1.5, $fn = 90);
             translate([-39.5, 7, 23])
                 rotate([90, 0, 180])
-                    trunctear(18, 1.5, 90);
+                    trunctear(18, 1.5, $fn = 90);
             // 16mm M3 screws
             hull()
             {

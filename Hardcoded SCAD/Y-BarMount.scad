@@ -90,6 +90,6 @@ module YMount()
             polyhole(6, 2);
         translate([46, -10, 29])
             rotate([90, 0, 90])
-                trunctear(14, 1.5, 90);
+                trunctear(14, 1.5, $fn = 90);
     }
 }

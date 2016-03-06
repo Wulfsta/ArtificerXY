@@ -234,10 +234,10 @@ module Carriage()
                 cube([15, 2, 7], center = true);
             translate([-55, 46, 14.625])
                 rotate([90, 0, 90])
-                    trunctear(15, 1.5, 90);
+                    trunctear(15, 1.5, $fn = 90);
             translate([-55, 40, 6.875])
                 rotate([90, 0, 90])
-                    trunctear(15, 1.5, 90);
+                    trunctear(15, 1.5, $fn = 90);
             translate([-42.4, 46, 14.625])
                 rotate([90, 0, 90])
                     nutShape(5.5, 2.4);

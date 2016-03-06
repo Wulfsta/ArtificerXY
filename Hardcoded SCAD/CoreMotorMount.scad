@@ -83,9 +83,9 @@ module CoreMotorMount()
             polyhole(6, 2);
         translate([50, 0, 16])
             rotate([90, 0, 180])
-                trunctear(7, 2, 90);
+                trunctear(7, 2, $fn = 90);
         translate([0, 50, 16])
             rotate([90, 0, 90])
-                trunctear(7, 2, 90);
+                trunctear(7, 2, $fn = 90);
     }
 }
