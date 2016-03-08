@@ -13,17 +13,17 @@ module Bed()
             square([214, 214], center = true);
             hull()
             {
-                translate([214/2+29/2, 0])
-                    square([29, 2*29*(2*cos(45)-1)], center = true);
+                translate([214/2+36/2, 0])
+                    square([36, 2*36*(2*cos(45)-1)], center = true);
                 translate([214/2-1, 0])
-                    square([2, 2*29*2*cos(45)], center = true);
+                    square([2, 2*36*2*cos(45)], center = true);
             }
             hull()
             {
-                translate([-214/2-29/2, 0])
-                    square([29, 2*29*(2*cos(45)-1)], center = true);
+                translate([-214/2-36/2, 0])
+                    square([36, 2*36*(2*cos(45)-1)], center = true);
                 translate([-214/2+1, 0])
-                    square([2, 2*29*2*cos(45)], center = true);
+                    square([2, 2*36*2*cos(45)], center = true);
             }
         }
         for (i = vec)
@@ -41,12 +41,12 @@ module Bed()
         translate([0, 209/2])
             circle(r = 1.5, $fn = 90);
         for (i = vec)
-            translate([i/abs(i)*(abs(i)/2+29/2), 0])
-                circle(r = 5, $fn = 90);
+            translate([i/abs(i)*(abs(i)/2+36/2), 0])
+                circle(r = 8, $fn = 90);
         for (k = vec)
             for (i = alter)
                 for (j = alter)
-                    translate([k/abs(k)*(abs(k)/2+29/2)+21/2*i*cos(60), 21/2*j*sin(60)])
-                        circle(r = 3.4/2, $fn = 90);
+                    translate([k/abs(k)*(abs(k)/2+36/2)+31/2*i*cos(45), 31/2*j*sin(45)])
+                        circle(r = 5.4/2, $fn = 90);
     }
 }
