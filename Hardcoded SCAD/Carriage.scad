@@ -32,13 +32,13 @@ module Carriage()
                     }
                     hull()
                     {
-                        translate([28, 3, 5.5])
+                        translate([27, 3, 5.5])
                             cube([2, 2, 5], center = true);
-                        translate([-28, 3, 5.5])
+                        translate([-27, 3, 5.5])
                             cube([2, 2, 5], center = true);
-                        translate([-28, 59, 5.5])
+                        translate([-27, 59, 5.5])
                             cube([2, 2, 5], center = true);
-                        translate([28, 59, 5.5])
+                        translate([27, 59, 5.5])
                             cube([2, 2, 5], center = true);
                     }
                 }
@@ -56,10 +56,10 @@ module Carriage()
                     cube([34, 34, 8], center = true);
                 translate([0, 30, 4])
                     cube([12, 60, 8], center = true);
-                translate([43-15/2, 43, 10.75/2])
-                    cube([15, 60-26, 10.75], center = true);
-                translate([-43+15/2, 43, 10.75/2])
-                    cube([15, 60-26, 10.75], center = true);
+                translate([43-15/2, 43+(60-26)/4, (10.75+4)/2])
+                    cube([15, (60-26)/2, (10.75+4)], center = true);
+                translate([-43+15/2, 43-(60-26)/4, (10.75+4)/2])
+                    cube([15, (60-26)/2, (10.75+4)], center = true);
             }
             translate([29, 13, 10.75])
                 rotate([90, 0, 90])
@@ -108,22 +108,22 @@ module Carriage()
                 nutShape(7, 8);
             translate([0, 31-25, 3.5])
                 nutShape(7, 8);
-            translate([43-15/2, 43-5, 10.75])
+            translate([43-15/2, 43-5, 10.75-4])
                 cube([15, 6.5, 0.63], center = true);
-            translate([43-15/2, 43+5, 10.75])
+            translate([43-15/2, 43+5, 10.75+4])
                 cube([15, 6.5, 0.63], center = true);
-            translate([-43+15/2, 43-5, 10.75])
+            translate([-43+15/2, 43-5, 10.75+4])
                 cube([15, 6.5, 0.63], center = true);
-            translate([-43+15/2, 43+5, 10.75])
+            translate([-43+15/2, 43+5, 10.75-4])
                 cube([15, 6.5, 0.63], center = true);
             translate([43-15/2, 43+12, 0])
-                polyhole(11, 1.5);
+                polyhole(20, 1.5);
             translate([43-15/2, 43-12, 0])
-                polyhole(11, 1.5);
+                polyhole(20, 1.5);
             translate([-43+15/2, 43+12, 0])
-                polyhole(11, 1.5);
+                polyhole(20, 1.5);
             translate([-43+15/2, 43-12, 0])
-                polyhole(11, 1.5);
+                polyhole(20, 1.5);
             translate([43-14, 13, 10.75])
                 rotate([0, 90, 0])
                     difference()
@@ -145,6 +145,10 @@ module Carriage()
                         cylinder(h = 4, r = 12, center = true, $fn = 90);
                         cylinder(h = 4, r = 9.5, center = true, $fn = 90);
                     }
+            translate([43-15/2, 43-(60-26)/4, 10.75-4+5])
+                cube([15, (60-26)/2, 10], center = true);
+            translate([-43+15/2, 43+(60-26)/4, 10.75-4+5])
+                cube([15, (60-26)/2, 10], center = true);
         }
         translate([13, 73, 3])
             cube([2, 26, 6], center = true);
