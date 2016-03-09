@@ -17,15 +17,15 @@ module YMountBearing()
                 cylinder(h = 6, r = 2, $fn = 90);
                 translate([0, 20, 0])
                     cylinder(h = 6, r = 2, $fn = 90);
-                translate([34, 20, 0])
+                translate([35, 20, 0])
                     cylinder(h = 6, r = 2, $fn = 90);
-                translate([50, -2, 3])
+                translate([55, -2, 3])
                     cube([2, 2, 6], center = true);
             }
         }
-        translate([19.05, 15, 0])
+        translate([42.3/2-12.2/2+5, 15, 0])
             polyhole(6, 2.5);
-        translate([31.25, 15, 0])
+        translate([42.3/2+12.2/2+0.63+5, 15, 0])
             polyhole(6, 2.5);
     }
 }

@@ -39,7 +39,7 @@ module BearingMount()
                     cylinder(h = 6, r = 2, $fn = 90);
                 translate([6, 20, 0])
                     cylinder(h = 6, r = 2, $fn = 90);
-                translate([34, 20, 0])
+                translate([35, 20, 0])
                     cylinder(h = 6, r = 2, $fn = 90);
                 translate([49, 5, 3])
                     cube([2, 2, 6], center = true);
@@ -57,9 +57,9 @@ module BearingMount()
             polyhole(6, 2);
         translate([-10, 25, 0])
             polyhole(6, 2);
-        translate([19.05, 15, 0])
+        translate([42.3/2-12.2/2+5, 15, 0])
             polyhole(6, 2.5);
-        translate([31.25, 15, 0])
+        translate([42.3/2+12.2/2+0.63+5, 15, 0])
             polyhole(6, 2.5);
         translate([0, 25, 16])
             rotate([90, 0, 90])
