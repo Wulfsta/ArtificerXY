@@ -44,7 +44,7 @@ module BedMountC()
             {
                 hull()
                 {
-                    dist = 5; //distance from edge of bed to v slot extrusion
+                    dist = 13; //distance from edge of bed to v slot extrusion
                     translate([-dist, -6, 1])
                         cube([(10-5.40)*2, 6, 2], center = true);
                     translate([-dist, -6, 4])
@@ -62,10 +62,10 @@ module BedMountC()
         }
         translate([20, -6, 4])
             rotate([90, 0, -90])
-                trunctear(30, 2.5, $fn = 90);
+                trunctear(40, 2.5, $fn = 90);
         translate([20, -6, 64])
             rotate([90, 0, -90])
-                trunctear(30, 2.5, $fn = 90);
+                trunctear(40, 2.5, $fn = 90);
         translate([0, 0, 6])
             linear_extrude(height = 30, scale = 0)
                 polygon([[0, 0], [15, 0], [0, 20]]);
