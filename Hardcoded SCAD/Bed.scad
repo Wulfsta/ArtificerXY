@@ -14,7 +14,7 @@ module Bed()
             for (i = alter)
                 hull()
                 {
-                    translate([i*214/2+i*41/2, 0])
+                    translate([i*214/2+i*46/2, 0])
                         square([46, 2*46*(2*cos(45)-1)], center = true);
                     translate([i*214/2-i*1, 0])
                         square([2, 2*46*2*cos(45)], center = true);
