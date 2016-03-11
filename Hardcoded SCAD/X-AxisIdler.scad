@@ -94,7 +94,7 @@ module XIdler()
             }
             translate([-28.5, 30, 21])
                 cube([4, 3, 20], center = true);
-            translate([0, 0, 38-0.63])
+            translate([0, 0, 38-0.63-0.02])
                 rotate([90, 0, 180])
                     trunctear(28, 2.5, $fn = 90);
             translate([37.5, 14, 22])

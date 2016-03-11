@@ -82,9 +82,9 @@ module YMount()
             polyhole(6, 2);
         translate([37.5, -10, 0])
             polyhole(6, 2);
-        translate([0, -10, 0])
+        translate([5, -10, 0])
             polyhole(6, 2);
-        translate([-10, 0, 0])
+        translate([-10, 5, 0])
             polyhole(6, 2);
         translate([-10, 25, 0])
             polyhole(6, 2);

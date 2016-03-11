@@ -23,9 +23,9 @@ module YMountBearing()
                     cube([2, 2, 6], center = true);
             }
         }
-        translate([42.3/2-12.2/2+5, 15, 0])
+        translate([42.3/2-12.22/2+5, 15, 0])
             polyhole(6, 2.5);
-        translate([42.3/2+12.2/2+0.63+5, 15, 0])
+        translate([42.3/2+12.22/2+0.63+5, 15, 0])
             polyhole(6, 2.5);
     }
 }
