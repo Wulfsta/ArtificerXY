@@ -1,4 +1,4 @@
-// Corener brace
+// Corner brace
 
 use<polyhole.scad>
 
