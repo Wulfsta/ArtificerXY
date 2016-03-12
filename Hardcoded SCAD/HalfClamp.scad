@@ -13,27 +13,33 @@ module HalfClampNut()
     {
         union()
         {
-            cylinder(h = 24, r = 15/2, $fn = 90);
+            cylinder(h = 20, r = 15/2, $fn = 90);
             hull()
             {
                 translate([15, 0, 0])
-                    scale([4, 10, 24-14.25])
+                    scale([4, 10, 20-14.25])
                         cylinder(h = 1, r = 1, $fn = 90);
                 translate([-15, 0, 0])
-                    scale([4, 10, 24-14.25])
+                    scale([4, 10, 20-14.25])
                         cylinder(h = 1, r = 1, $fn = 90);
-                translate([0, 0, (24-14.25)/2])
-                    cube([8.8, 20, 24-14.25], center = true);
+                translate([0, 0, (20-14.25)/2])
+                    cube([8.8, 20, 20-14.25], center = true);
             }
         }
         polyhole(24, 6);
-        translate([0, 0, 5])
-            rotate([90, 0, 180])
-                trunctear(19, 2, $fn = 90);
-        translate([10.5, 0, 5])
+        hull()
+        {
+            translate([0, 0, 2])
+                rotate([90, 0, 180])
+                    trunctear(19, 2, $fn = 90);
+            translate([0, 0, 0])
+                rotate([90, 0, 180])
+                    trunctear(19, 2, $fn = 90);
+        }
+        translate([10.5, 0, 2.2])
             rotate([90, 0, 180])
                 trunctear(19, 1.5, $fn = 90);
-        translate([-10.5, 0, 5])
+        translate([-10.5, 0, 2.2])
             rotate([90, 0, 180])
                 trunctear(19, 1.5, $fn = 90);
         translate([0, -14, 0])

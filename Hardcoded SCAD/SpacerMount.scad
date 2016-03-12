@@ -11,8 +11,6 @@ module SpacerMount()
     {
         union()
         {
-            translate([0, 10, 4])
-                cube([20, 20, , 8], center = true);
             translate([0, (2*20+6)/2, 3])
                 cube([20, 2*20+6, , 6], center = true);
             translate([0, 23, 13])

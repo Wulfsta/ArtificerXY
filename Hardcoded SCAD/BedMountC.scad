@@ -44,7 +44,7 @@ module BedMountC()
             {
                 hull()
                 {
-                    dist = 13; //distance from edge of bed to v slot extrusion
+                    dist = 5; //distance from edge of bed to v slot extrusion
                     translate([-dist, -6, 1])
                         cube([(10-5.40)*2, 6, 2], center = true);
                     translate([-dist, -6, 4])
