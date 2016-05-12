@@ -13,54 +13,38 @@ module CoreMotorMount()
         {
             hull()
             {
-                translate([1, 1, 4])
-                    cube([2, 2, 8], center = true);
-                translate([41.3, 1, 4])
-                    cube([2, 2, 8], center = true);
-                translate([1, 41.3, 4])
-                    cube([2, 2, 8], center = true);
-                translate([40.3, 40.3, 0])
-                    cylinder(h = 8, r = 2, $fn = 90);
+                translate([-18, 2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([-18, 42.3+22-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([-1, 42.3+22-1, 5/2])
+                    cube([2, 2, 5], center = true);
+                translate([42.3-2, 2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([42.3-2, 42.3-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
             }
             hull()
             {
                 translate([2, -18, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([58, -18, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([58, 6, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([2, 18, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([40.3, 40.3, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([2, 42.3-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([42.3-2, -18, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([42.3-2, 42.3-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
             }
             hull()
             {
-                translate([-18, 2, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([-18, 58, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([6, 58, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([18, 2, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([40.3, 40.3, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-            }
-            hull()
-            {
-                translate([3, 51.15, 3])
-                    cube([6, 17.7, 6], center = true);
-                translate([3, 50, 16])
-                    cube([6, 15.4, 20], center = true);
-            }
-            hull()
-            {
-                translate([51.15, 3, 3])
-                    cube([17.7, 6, 6], center = true);
-                translate([50, 3, 16])
-                    cube([15.4, 6, 20], center = true);
+                translate([-18, 42.3+2+5-15+2, 0])
+                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                translate([-4, 42.3+2+5-15+2, 0])
+                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                translate([-18, 42.3+22-2, 0])
+                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                translate([-4, 42.3+22-2, 0])
+                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
             }
         }
         translate([21.15, 21.15, 0])
@@ -74,18 +58,17 @@ module CoreMotorMount()
         translate([36.65, 36.65, 0])
             polyhole(8, 1.5);
         translate([10, -10, 0])
-            polyhole(6, 2);
-        translate([50, -10, 0])
-            polyhole(6, 2);
+            polyhole(5, 2);
+        translate([42.3-10, -10, 0])
+            polyhole(5, 2);
         translate([-10, 10, 0])
-            polyhole(6, 2);
-        translate([-10, 50, 0])
-            polyhole(6, 2);
-        translate([50, 0, 16])
-            rotate([90, 0, 180])
-                trunctear(7, 2, $fn = 90);
-        translate([0, 50, 16])
-            rotate([90, 0, 90])
-                trunctear(7, 2, $fn = 90);
+            polyhole(5, 2);
+        translate([-10, 42.3+2+5-10, 0])
+            polyhole(5+4.5+2, 2);
+        translate([-10, 42.3+2+5+10, 0])
+            polyhole(5+4.5+2, 2);
+        translate([-2, 42.3+2+5, 5+5+2])
+            rotate([0, -90, 0])
+                cylinder(h = 20, r = 5, $fn = 90);
     }
 }

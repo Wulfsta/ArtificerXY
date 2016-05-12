@@ -5,6 +5,42 @@ use<trunctear.scad>
 
 BearingMount();
 
+module BearingMount1()
+{
+    difference()
+    {
+        union()
+        {
+            hull()
+            {
+                translate([-18, 2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([-18, 42.3+22-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([-1, 42.3+22-1, 5/2])
+                    cube([2, 2, 5], center = true);
+                translate([25-2, 2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([25-2, 42.3+2+5-15+2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+            }
+            translate([10+5, 5/2, 25/2])
+                cube([20, 5, 25], center = true);
+        }
+        translate([-10, 10, 0])
+            polyhole(5, 2);
+        translate([-10, 42.3+22-10, 0])
+            polyhole(5, 2);
+        translate([15, 42.3/2-12.22/2+5, 0])
+            polyhole(5, 2.5);
+        translate([15, 42.3/2+12.22/2+0.63+5, 0])
+            polyhole(5, 2.5);
+        translate([25-10, 0, 5+10])
+            rotate([90, 0, 180])
+                trunctear(6, 2, $fn = 90);
+    }
+}
+
 module BearingMount()
 {
     difference()
@@ -13,59 +49,52 @@ module BearingMount()
         {
             hull()
             {
-                translate([2, 6, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([2, -18, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([48, -18, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([49, 5, 3])
-                    cube([2, 2, 6], center = true);
+                translate([26-2, 2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([26-2, 45-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([5/2, 45/2, 5/2])
+                    cube([5, 45, 5], center = true);
             }
             hull()
             {
-                translate([5, 1, 3])
-                    cube([2, 2, 6], center = true);
-                translate([-18, 2, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([-18, 33, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([5, 34, 3])
-                    cube([2, 2, 6], center = true);
+                translate([-20+2, 20+2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([-20+2, 45-2, 0])
+                    cylinder(h = 5, r = 2, $fn = 90);
+                translate([5/2, 45-25/2, 5/2])
+                    cube([5, 25, 5], center = true);
             }
             hull()
             {
-                translate([6, 6, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([6, 20, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([35, 20, 0])
-                    cylinder(h = 6, r = 2, $fn = 90);
-                translate([49, 5, 3])
-                    cube([2, 2, 6], center = true);
+                translate([0, 2, 42.3/2+12.22/2+0.63+5+10-2])
+                    rotate([0, 90, 0])
+                        cylinder(h = 5, r = 2, $fn = 90);
+                translate([0, 45-2, 42.3/2+12.22/2+0.63+5+10-2])
+                    rotate([0, 90, 0])
+                        cylinder(h = 5, r = 2, $fn = 90);
+                translate([5/2, 45/2, 5/2])
+                    cube([5, 45, 5], center = true);
             }
-            translate([40, 3, 16])
-                cube([20, 6, 20], center = true);
-            translate([3, 25, 16])
-                cube([6, 20, 20], center = true);
         }
-        translate([10, -10, 0])
-            polyhole(6, 2);
-        translate([40, -10, 0])
-            polyhole(6, 2);
-        translate([-10, 10, 0])
-            polyhole(6, 2);
-        translate([-10, 25, 0])
-            polyhole(6, 2);
-        translate([42.3/2-12.22/2+5, 15, 0])
-            polyhole(6, 2.5);
-        translate([42.3/2+12.22/2+0.63+5, 15, 0])
-            polyhole(6, 2.5);
-        translate([0, 25, 16])
+        translate([26-(26-5)/2, 10, 0])
+            polyhole(5, 2);
+        translate([26-10, 45-10, 0])
+            polyhole(5, 2);
+        translate([-20+10, 45-25/2, 0])
+            polyhole(5, 2);
+        translate([0, 10, 15])
             rotate([90, 0, 90])
-                trunctear(7, 2, $fn = 90);
-        translate([40, 0, 16])
-            rotate([-90, 180, 0])
-                trunctear(7, 2, $fn = 90);
+                trunctear(6, 2, $fn = 90);
+        translate([0, 10, 42.3/2+12.22/2+0.63+5])
+            rotate([90, 0, 90])
+                trunctear(6, 2, $fn = 90);
+        translate([0, 45-10, 42.3/2-12.22/2+5])
+            rotate([90, 0, 90])
+                trunctear(6, 2.5, $fn = 90);
+        translate([0, 45-10, 42.3/2+12.22/2+0.63+5])
+            rotate([90, 0, 90])
+                trunctear(6, 2.5, $fn = 90);
+        
     }
 }

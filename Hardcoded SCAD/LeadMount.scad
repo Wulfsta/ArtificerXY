@@ -2,6 +2,7 @@
 
 use<polyhole.scad>
 use<trunctear.scad>
+use<nutShape.scad>
 
 LeadMount();
 
@@ -13,40 +14,55 @@ module LeadMount()
         {
             hull()
             {
-                cylinder(h = 5+14.25+(20-14.25)+2, r = 21+6, $fn = 90);
-                translate([0, -27+16, (5+14.25+(20-14.25)+2)/2])
-                    cube([54, 20+12, 5+14.25+(20-14.25)+2], center = true);
-                translate([0, 27-16, (5+14.25+(20-14.25)+2)/2])
-                    cube([20+12, 27, 5+14.25+(20-14.25)+2], center = true);
+                cylinder(h = 20, r = 21+6, $fn = 90);
+                translate([0, 0, 10])
+                    cube([27*2, 20+12, 20], center = true);
             }
-            translate([0, -27+16, (5+14.25+(20-14.25)+2)/2])
-                cube([110, 20+12, 5+14.25+(20-14.25)+2], center = true);
-            translate([0, 55/2, (5+14.25+(20-14.25)+2)/2])
-                cube([20+12, 55, 5+14.25+(20-14.25)+2], center = true);
+            hull()
+            {
+                cylinder(h = 6, r = 21+6, $fn = 90);
+                translate([0, 0, 3])
+                    cube([2*(21+6)+3, 20+10+11+4, 6], center = true);
+                translate([0, 0, 3])
+                    cube([2*(21+6+20), 20+10, 6], center = true);
+            }
+            translate([21+6+20/2, 0, (20+20+6)/2])
+                cube([20, 20+10, 20+20+6], center = true);
+            translate([-(21+6+20/2), 0, (20+20+6)/2])
+                cube([20, 20+10, 20+20+6], center = true);
         }
-        polyhole(100, 14);
-        translate([0, 0, 5])
-            polyhole(100, 21);
-        translate([30+27, -27+16, 5+14.25+(20-14.25)+2-10])
-            cube([60, 20, 20], center = true);
-        translate([-30-27, -27+16, 5+14.25+(20-14.25)+2-10])
-            cube([60, 20, 20], center = true);
-        translate([0, 30+27, 5+14.25+(20-14.25)+2-10])
-            cube([20, 60, 20], center = true);
-        translate([27+10, -27+16, 0])
-            polyhole(7, 2);
-        translate([-27-10, -27+16, 0])
-            polyhole(7, 2);
-        translate([0, 27+10, 0])
-            polyhole(7, 2);
-        translate([110/2-10, (20+12)/2-27+16, 5+14.25+(20-14.25)+2-10])
+        polyhole(100, 21);
+        translate([30+27, 0, (20+20+6)/2])
+            cube([60, 20, 20+20+6], center = true);
+        translate([-30-27, 0, (20+20+6)/2])
+            cube([60, 20, 20+20+6], center = true);
+        translate([21+6+10, (20+12)/2, 10])
             rotate([90, 0, 0])
                 trunctear(20+12, 2, $fn = 90);
-        translate([-110/2+10, (20+12)/2-27+16, 5+14.25+(20-14.25)+2-10])
+        translate([-(21+6+10), (20+12)/2, 10])
             rotate([90, 0, 0])
                 trunctear(20+12, 2, $fn = 90);
-        translate([-(20+12)/2, 110/2-10, 5+14.25+(20-14.25)+2-10])
-            rotate([90, 0, 90])
+        translate([21+6+10, (20+12)/2, 20+20+6-10])
+            rotate([90, 0, 0])
                 trunctear(20+12, 2, $fn = 90);
+        translate([-(21+6+10), (20+12)/2, 20+20+6-10])
+            rotate([90, 0, 0])
+                trunctear(20+12, 2, $fn = 90);
+        translate([21+6, 10+5+5.5/2, 6])
+            nutShape(5.5, 20+20+6);
+        translate([21+6, -(10+5+5.5/2), 6])
+            nutShape(5.5, 20+20+6);
+        translate([-(21+6), 10+5+5.5/2, 6])
+            nutShape(5.5, 20+20+6);
+        translate([-(21+6), -(10+5+5.5/2), 6])
+            nutShape(5.5, 20+20+6);
+        translate([21+6, 10+5+5.5/2, 0])
+            polyhole(6, 1.5);
+        translate([21+6, -(10+5+5.5/2), 0])
+            polyhole(6, 1.5);
+        translate([-(21+6), 10+5+5.5/2, 0])
+            polyhole(6, 1.5);
+        translate([-(21+6), -(10+5+5.5/2), 0])
+            polyhole(6, 1.5);
     }
 }
