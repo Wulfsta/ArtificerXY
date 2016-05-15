@@ -1,4 +1,4 @@
-// Clamp used for y and z rods
+// Clamp used for y rods
 // Uses 30mm m4 bolts
 
 use<polyhole.scad>

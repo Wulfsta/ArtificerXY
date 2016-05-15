@@ -1,7 +1,7 @@
 // Mount for z rods
 // Uses 40mm m4 bolts
 
-use<polyhole.scad>
+use<trunctear.scad>
 
 ZBarMount();
 
@@ -13,33 +13,23 @@ module ZBarMount()
         {
             hull()
             {
-                translate([-18, -13, 0])
-                    cylinder(h = 15+4.5+2, r = 2, $fn = 90);
-                translate([-4, -13, 0])
-                    cylinder(h = 15+4.5+2, r = 2, $fn = 90);
-                translate([-18, 13, 0])
-                    cylinder(h = 15+4.5+2, r = 2, $fn = 90);
-                translate([-4, 13, 0])
-                    cylinder(h = 15+4.5+2, r = 2, $fn = 90);
+                translate([0, 13, 0])
+                    cylinder(h = 20, r = 5+4, $fn = 90);
+                translate([5+4-2, 2, 0])
+                    cylinder(h = 20, r = 2, $fn = 90);
+                translate([-5-4+2, 2, 0])
+                    cylinder(h = 20, r = 2, $fn = 90);
             }
-            hull()
-            {
-                translate([-18, -13, 0])
-                    cylinder(h = 5, r = 2, $fn = 90);
-                translate([-2, -13, 0])
-                    cylinder(h = 5, r = 2, $fn = 90);
-                translate([-18, 13, 0])
-                    cylinder(h = 5, r = 2, $fn = 90);
-                translate([-2, 13, 0])
-                    cylinder(h = 5, r = 2, $fn = 90);
-            }
+            translate([0, 5/2, 10])
+                cube([2*(18), 5, 20], center = true);
         }
-        translate([-10, 10, 0])
-            polyhole(15+4.5+2, 2);
-        translate([-10, -10, 0])
-            polyhole(15+4.5+2, 2);
-        translate([-2, 0, 15+5+2])
-            rotate([0, -90, 0])
-                cylinder(h = 20, r = 5, $fn = 90);
+        translate([0, 13, 4])
+            cylinder(h = 20, r = 5, $fn = 90);
+        translate([(5+4+(18-5-4)/2), 5/2, 10])
+            rotate([90, 0, 0])
+                trunctear(5, 2, true, $fn = 90);
+        translate([-(5+4+(18-5-4)/2), 5/2, 10])
+            rotate([90, 0, 0])
+                trunctear(5, 2, true, $fn = 90);
     }
 }

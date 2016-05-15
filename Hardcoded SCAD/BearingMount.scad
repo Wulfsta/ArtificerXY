@@ -5,7 +5,7 @@ use<trunctear.scad>
 
 BearingMount();
 
-module BearingMount1()
+module BearingMount()
 {
     difference()
     {
@@ -15,33 +15,36 @@ module BearingMount1()
             {
                 translate([-18, 2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([-18, 42.3+22-2, 0])
+                translate([-18, 42.3/2+12.22/2+0.63+5+10-2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([-1, 42.3+22-1, 5/2])
-                    cube([2, 2, 5], center = true);
-                translate([25-2, 2, 0])
+                translate([35-2, 2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([25-2, 42.3+2+5-15+2, 0])
+                translate([35-2, 42.3/2+12.22/2+0.63+5+10-2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
             }
-            translate([10+5, 5/2, 25/2])
+            translate([25, 5/2, 25/2])
                 cube([20, 5, 25], center = true);
         }
         translate([-10, 10, 0])
             polyhole(5, 2);
-        translate([-10, 42.3+22-10, 0])
+        translate([-10, 42.3/2+12.22/2+0.63+5, 0])
             polyhole(5, 2);
-        translate([15, 42.3/2-12.22/2+5, 0])
+        hull()
+        {
+            translate([25, 42.3/2-12.22/2+5, 0])
+                polyhole(5, 2.5);
+            translate([10, 42.3/2-12.22/2+5, 0])
+                polyhole(5, 2.5);
+        }
+        translate([25, 42.3/2+12.22/2+0.63+5, 0])
             polyhole(5, 2.5);
-        translate([15, 42.3/2+12.22/2+0.63+5, 0])
-            polyhole(5, 2.5);
-        translate([25-10, 0, 5+10])
+        translate([25, 0, 5+10])
             rotate([90, 0, 180])
                 trunctear(6, 2, $fn = 90);
     }
 }
 
-module BearingMount()
+module BearingMount1()
 {
     difference()
     {

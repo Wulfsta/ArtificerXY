@@ -18,9 +18,9 @@ module YMount()
                     cylinder(h = 5, r = 2, $fn = 90);
                 translate([-1, 42.3+22-1, 5/2])
                     cube([2, 2, 5], center = true);
-                translate([25-2, 2, 0])
+                translate([35-2, 2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([25-2, 42.3/2+12.22/2+0.63+5+10-2, 0])
+                translate([35-2, 42.3/2+12.22/2+0.63+5+10-2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
             }
             hull()
@@ -29,9 +29,9 @@ module YMount()
                     cylinder(h = 5, r = 2, $fn = 90);
                 translate([2, 42.3/2+12.22/2+0.63+5+10-2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([25-2, -18, 0])
+                translate([35-2, -18, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
-                translate([25-2, 42.3/2+12.22/2+0.63+5+10-2, 0])
+                translate([35-2, 42.3/2+12.22/2+0.63+5+10-2, 0])
                     cylinder(h = 5, r = 2, $fn = 90);
             }
             hull()
@@ -46,7 +46,7 @@ module YMount()
                     cylinder(h = 5+4.5+2, r = 2, $fn = 90);
             }
         }
-        translate([25/2, -10, 0])
+        translate([35/2, -10, 0])
             polyhole(5, 2);
         translate([-10, 10, 0])
             polyhole(5, 2);
@@ -57,9 +57,14 @@ module YMount()
         translate([-2, 42.3+2+5, 5+5+2])
             rotate([0, -90, 0])
                 cylinder(h = 20, r = 5, $fn = 90);
-        translate([15, 42.3/2-12.22/2+5, 0])
-            polyhole(5, 2.5);
-        translate([15, 42.3/2+12.22/2+0.63+5, 0])
+        hull()
+        {
+            translate([25, 42.3/2-12.22/2+5, 0])
+                polyhole(5, 2.5);
+            translate([10, 42.3/2-12.22/2+5, 0])
+                polyhole(5, 2.5);
+        }
+        translate([25, 42.3/2+12.22/2+0.63+5, 0])
             polyhole(5, 2.5);
     }
 }

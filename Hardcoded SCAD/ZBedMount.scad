@@ -41,8 +41,33 @@ module ZBedMount()
                     cube([20+5+5, 3.1+5.4+18/2, 55+3+3], center = true);
             }
         }
-        translate([0, (15+(5+2)*2+15)/2, (55+3+3)/2+5])
-            cube([20, 15+(5+2)*2+15, 55+3+3], center = true);
+        hull()
+        {
+            difference()
+            {
+                hull()
+                {
+                    translate([0, (15+(5+2)*2+15)/2, (20)/2+5])
+                        cube([20, 15+(5+2)*2+15, 20], center = true);
+                    translate([-5, (15+(5+2)*2+5)/2, (30)/2+5])
+                        cube([10, 15+(5+2)*2+5, 30], center = true);
+                }
+                translate([-5, (15+(5+2)*2+15)/2, (30)/2+5])
+                    cube([10, 15+(5+2)*2+15, 30], center = true);
+            }
+            difference()
+            {
+                hull()
+                {
+                    translate([0, (15+(5+2)*2+15)/2, (20)/2+5])
+                        cube([20, 15+(5+2)*2+15, 20], center = true);
+                    translate([5, (15+(5+2)*2+5)/2, (30)/2+5])
+                        cube([10, 15+(5+2)*2+5, 30], center = true);
+                }
+                translate([5, (15+(5+2)*2+15)/2, (30)/2+5])
+                    cube([10, 15+(5+2)*2+15, 30], center = true);
+            }
+        }
         translate([(20+5+5)/2, 15+5+2, 20+5-3.2])
             rotate([0, 0, 30])
                 nutShape(7, 55);

@@ -17,9 +17,9 @@ ydist = ceil(90+22+42.3+200+40);
 translate([0, 0, 25])
     rotate([0, 0, -90])
         YMountMirror();
-translate([0, -20, 5])
-    rotate([0, 90, 0])
-        BearingMount();
+translate([0, 0, 0])
+    rotate([0, 0, -90])
+        BearingMountMirror();
 translate([-25, 20, -21])
     rotate([90, 0 ,90])
         LBracketMirror();
@@ -27,9 +27,9 @@ translate([-25, 20, -21])
 translate([xdist, 0, 25])
     rotate([0, 0, 90])
         YMount();
-translate([xdist, -20, 5])
-    rotate([0, -90, 0])
-        BearingMountMirror();
+translate([xdist, 0, 0])
+    rotate([0, 0, 90])
+        BearingMount();
 translate([xdist+25, 20, -21])
     rotate([90, 0 ,-90])
         LBracket();
