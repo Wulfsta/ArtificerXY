@@ -38,13 +38,13 @@ module CoreMotorMount()
             hull()
             {
                 translate([-18, 42.3+2+5-15+2, 0])
-                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                    cylinder(h = 5+1+2.5+19/2-0.5, r = 2, $fn = 90);
                 translate([-4, 42.3+2+5-15+2, 0])
-                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                    cylinder(h = 5+1+2.5+19/2-0.5, r = 2, $fn = 90);
                 translate([-18, 42.3+22-2, 0])
-                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                    cylinder(h = 5+1+2.5+19/2-0.5, r = 2, $fn = 90);
                 translate([-4, 42.3+22-2, 0])
-                    cylinder(h = 5+4.5+2, r = 2, $fn = 90);
+                    cylinder(h = 5+1+2.5+19/2-0.5, r = 2, $fn = 90);
             }
         }
         translate([21.15, 21.15, 0])
@@ -64,10 +64,10 @@ module CoreMotorMount()
         translate([-10, 10, 0])
             polyhole(5, 2);
         translate([-10, 42.3+2+5-10, 0])
-            polyhole(5+4.5+2, 2);
+            polyhole(5+1+2.5+19/2-0.5, 2);
         translate([-10, 42.3+2+5+10, 0])
-            polyhole(5+4.5+2, 2);
-        translate([-2, 42.3+2+5, 5+5+2])
+            polyhole(5+1+2.5+19/2-0.5, 2);
+        translate([-2, 42.3+2+5, 5+1+2.5+19/2])
             rotate([0, -90, 0])
                 cylinder(h = 20, r = 5, $fn = 90);
     }
