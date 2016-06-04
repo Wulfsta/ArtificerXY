@@ -9,7 +9,7 @@ module Carriage()
         union()
         {
             translate([0, 0, (20+6)/2])
-                cube([60, 28+2+25-(5+5)*2, 20+6], center = true);
+                cube([60, 28+2+25-(5+5)*2-1, 20+6], center = true);
             hull()
             {
                 translate([0, (28+2+25)/2-25-2/2, (20+6)/2])
