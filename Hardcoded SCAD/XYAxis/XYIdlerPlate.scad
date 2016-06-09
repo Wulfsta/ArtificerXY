@@ -1,8 +1,6 @@
-// A mount for the y-axis bar.
+XYIdlerPlate();
 
-YMount();
-
-module YMount()
+module XYIdlerPlate()
 {
     difference()
     {
