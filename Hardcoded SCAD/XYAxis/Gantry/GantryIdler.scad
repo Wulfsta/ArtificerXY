@@ -8,7 +8,7 @@ GantryIdler();
 module GantryIdler()
 {
     heig = 5+19+5; //distance of bearing assembly and 5mm of platic on each side.
-    widt = 25; //should be greater than (42.3+2+5)-(42.3/2+12.22/2+0.63+5).
+    widt = ((42.3+2+5+19/2+2.5)-(42.3/2+12.22/2+0.63+5)); //should be greater than (42.3+2+5)-(42.3/2+12.22/2+0.63+5).
     leng = 5+55+5; //length of bearing and 5 mm of plastic on each side.
     
     difference()
