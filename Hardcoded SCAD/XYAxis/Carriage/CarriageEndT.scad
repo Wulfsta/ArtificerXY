@@ -12,17 +12,17 @@ module CarriageEndT()
             hull()
             {
                 translate([65/2, 0, 0])
-                    cylinder(h = 5+5+5, r = (15+5)/2, $fn = 90);
+                    cylinder(h = 5+5+5, r = (15+6)/2, $fn = 90);
                 translate([-65/2, 0, 0])
-                    cylinder(h = 5+5+5, r = (15+5)/2, $fn = 90);
+                    cylinder(h = 5+5+5, r = (15+6)/2, $fn = 90);
                 translate([0, 0, (5+5+5)/2])
                     cube([60, 20+6, 5+5+5], center = true);
             }
         }
-        translate([65/2, 0, 5+5])
-            cylinder(h = 5+5, r = 15/2, $fn = 32);
-        translate([-65/2, 0, 5+5])
-            cylinder(h = 5+5, r = 15/2, $fn = 32);
+        translate([65/2, 0, 5+5-1])
+            cylinder(h = 5+5+1, r = 15/2, $fn = 32);
+        translate([-65/2, 0, 5+5-1])
+            cylinder(h = 5+5+1, r = 15/2, $fn = 32);
         translate([65/2, 0, 0])
             polyhole(5+5+5, 5.5);
         translate([-65/2, 0, 0])
