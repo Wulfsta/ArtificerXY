@@ -10,11 +10,11 @@ module ZMotorPlate()
             {
                 translate([0, 2])
                     circle(r = 2, $fn = 90);
-                translate([-(42.3/2-10-2), 6+2])
+                translate([-(57/2-10-2), 5+2])
                     circle(r = 2, $fn = 90);
-                translate([-(42.3/2-10-2), (43.9/2+6+42.3/2-2)])
+                translate([-(57/2-10-2), (57/2+5+57/2-2)])
                     circle(r = 2, $fn = 90);
-                translate([(42.3/2+10-2), (43.9/2+6+42.3/2-2)])
+                translate([(57/2+10-2), (57/2+5+57/2-2)])
                     circle(r = 2, $fn = 90);
                 translate([(20+37.69/2-10+1.38+5+2.5+10-2), 15+7-2])
                     circle(r = 2, $fn = 90);
@@ -48,17 +48,17 @@ module ZMotorPlate()
             circle(r = 2, $fn = 90);
         translate([(20+37.69/2-10+1.38+5), -10])
             circle(r = 2.5, $fn = 90);
-        translate([10, 43.9/2+6])
-            circle(r = 14, $fn = 90);
-        translate([10+31/2, 43.9/2+6+31/2])
-            circle(r = 1.5, $fn = 90);
-        translate([10+31/2, 43.9/2+6-31/2])
-            circle(r = 1.5, $fn = 90);
-        translate([10-31/2, 43.9/2+6+31/2])
-            circle(r = 1.5, $fn = 90);
-        translate([10-31/2, 43.9/2+6-31/2])
-            circle(r = 1.5, $fn = 90);
-        translate([43.9/2+10+1.75+5, 15])
+        translate([10, 57/2+6])
+            circle(r = 38.1/2+2, $fn = 90);
+        translate([10+47/2, 57/2+5+47/2])
+            circle(r = 2.5, $fn = 90);
+        translate([10+47/2, 57/2+5-47/2])
+            circle(r = 2.5, $fn = 90);
+        translate([10-47/2, 57/2+5+47/2])
+            circle(r = 2.5, $fn = 90);
+        translate([10-47/2, 57/2+5-47/2])
+            circle(r = 2.5, $fn = 90);
+        translate([43.9/2+10+1.75+5, 20])
             circle(r = 2.5, $fn = 90);
     }
 }

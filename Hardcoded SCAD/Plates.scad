@@ -67,29 +67,29 @@ translate([65, 12.5-3+20+5+58])
         scale([1, 1])
             LeadPlate();
             
-translate([75, 12.5-3+20+5+58+68])
+translate([72, 12.5-3+20+5+58+68])
     rotate([0, 0, 70])
         scale([1, 1])
             LeadPlate();
 
-translate([279, 12.5-3+20+5+58])
-    rotate([0, 0, 90])
+translate([278, 12.5-3+20+5+55])
+    rotate([0, 0, 85])
         scale([1, -1])
             ZBottomPlate();
 
-translate([163, 12.5-3+20+5+66])
+translate([195, 12.5-3+20+5+80])
     rotate([0, 0, 90])
-        scale([1, -1])
+        scale([1, 1])
             ZMotorPlate();
 
-translate([218, 12.5-3+20+5+147])
+translate([221, 12.5-3+20+5+187])
     rotate([0, 0, -90])
         scale([1, -1])
             IdlerPlate();
 
-translate([263, 12.5-3+20+5+153])
-    rotate([0, 0, 0])
-        scale([1, 1])
+translate([272, 12.5-3+20+5+193])
+    rotate([0, 0, 90])
+        scale([1, -1])
             IdlerPlate();
 
 translate([15, 130])
@@ -97,8 +97,8 @@ translate([15, 130])
         scale([1, 1])
             TensionerPlate();
 
-translate([90, 12.5-3+20+5+260])
-    rotate([0, 0, 180])
+translate([285, 12.5-3+20+5+250])
+    rotate([0, 0, -45])
         scale([1, 1])
             TensionerPlate();
 
@@ -107,9 +107,9 @@ translate([107, 12.5-3+20+5+214])
         scale([1, 1])
             XYIdlerPlate();
 
-translate([168, 12.5-3+20+5+155])
+translate([168, 12.5-3+20+5+175])
     rotate([0, 0, 0])
-        scale([-1, 1])
+        scale([-1, -1])
             XYIdlerBottomPlate();
 
 translate([47, 12.5-3+20+5+183])
@@ -117,19 +117,19 @@ translate([47, 12.5-3+20+5+183])
         scale([1, -1])
             XYMotorMountPlate();
 
-translate([213, 12.5-3+20+5+206])
+translate([273, 12.5-3+20+5+152])
     rotate([0, 0, 180])
         scale([-1, 1])
             XYIdlerBottomPlate();
 
-translate([140, 12.5-3+20+5+223])
-    rotate([0, 0, 90])
-        scale([1, -1])
+translate([195, 12.5-3+20+5+270])
+    rotate([0, 0, -90])
+        scale([1, 1])
             XYMotorMountPlate();
 
-translate([245, 12.5-3+20+5+232])
-    rotate([0, 0, -90])
-        scale([-1, 1])
+translate([105, 12.5-3+20+5+240])
+    rotate([0, 0, 90])
+        scale([1, -1])
             XYIdlerPlate();
 
 
